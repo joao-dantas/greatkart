@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
+from accounts.forms import RegistrationForm
 from carts.models import Cart, CartItem
 from store.models import Product, Variation
 

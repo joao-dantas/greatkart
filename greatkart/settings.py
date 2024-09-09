@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from django.core.checks import messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -26,7 +27,6 @@ SECRET_KEY = 'django-insecure-wo!8-9b-u1j0ki-%*ljrelxl*=6$y9%rf@oqw!x%%dtt0xj85)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -75,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'greatkart.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -106,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -117,7 +115,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -135,3 +132,17 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",
+}
+
+
+# Email settings
+EMAIL_HOST = 'mail.privateemail.com'  # Your domain-specific mail server
+EMAIL_PORT = 465  # Use 465 for SSL or 587 for TLS
+EMAIL_USE_SSL = True  # Set this to False if using TLS (use EMAIL_USE_TLS=True instead)
+EMAIL_HOST_USER = 'contact@firegram.net'
+EMAIL_HOST_PASSWORD = 'B0taf0g0s2'
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'contact@firegram.net'
