@@ -143,6 +143,6 @@ EMAIL_HOST = 'mail.privateemail.com'  # Your domain-specific mail server
 EMAIL_PORT = 465  # Use 465 for SSL or 587 for TLS
 EMAIL_USE_SSL = True  # Set this to False if using TLS (use EMAIL_USE_TLS=True instead)
 EMAIL_HOST_USER = 'contact@firegram.net'
-EMAIL_HOST_PASSWORD = 'B0taf0g0s2'
+EMAIL_HOST_PASSWORD = 'CHANGE_ME'
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'contact@firegram.net'
